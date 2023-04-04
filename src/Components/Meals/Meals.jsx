@@ -4,6 +4,7 @@ import SingleMeal from "../SingleMeal/SingleMeal";
 
 const Meals = () => {
   const meals = useLoaderData();
+
   return (
     <div>
       <h1 className="text-3xl font-bold">This our offers dish for you</h1>

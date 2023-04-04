@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SingleMeal = ({ meal }) => {
-  console.log(meal);
+  // console.log(meal);
   const { idCategory, strCategory, strCategoryDescription, strCategoryThumb } =
     meal;
+  const navigate = useNavigate();
+
+  const handleMeal = () => {
+    navigate(`/meal/${idCategory}`);
+  };
+
   return (
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl mt-5">
@@ -18,7 +25,9 @@ const SingleMeal = ({ meal }) => {
             Our Meal ID: {idCategory}
           </p>
           <div className="card-actions justify-center">
-            <button className="btn btn-info">Show me meal info</button>
+            <button onClick={handleMeal} className="btn btn-info">
+              Show me meal info
+            </button>
           </div>
         </div>
       </div>
