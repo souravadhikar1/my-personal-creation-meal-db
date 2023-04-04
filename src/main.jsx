@@ -8,12 +8,17 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Meals from "./Components/Meals/Meals";
 import Contact from "./Components/Contact/Contact";
+import Highlight from "./Components/Highlight/Highlight";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
     children: [
+      {
+        path: "/",
+        element: <Highlight></Highlight>,
+      },
       {
         path: "about",
         element: <About></About>,
